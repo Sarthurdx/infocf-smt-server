@@ -1,0 +1,28 @@
+
+
+
+<div id='r_func_result'>
+	<div>
+		<h2>Solutions ({{cw.length}})</h2>
+		<div id='result_list'>
+			<ul>
+				<li onclick="toggleAllTable()">Show all</li>
+				{% for i in cw.minima %}
+				<li onclick="toggleTable({{forloop.counter}})" id="option_{{forloop.counter}}">
+					<span class='spanhead'>{{forloop.counter}}</span>
+						<span> {{i}} </span>
+				</li>
+					{% endfor %}
+
+			</ul>
+		</div>
+	</div>
+	<div>
+		<div id='result'>
+			<table id='table_1'>
+				N/A
+			</table>
+		</div>
+	</div>
+</div>
+

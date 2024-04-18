@@ -1,0 +1,10 @@
+
+<table>
+	{% for i in part %}
+	<tr><th>level {{forloop.counter}}</th></tr>
+	{% for c in i %}
+	<tr><td>{{c.textRepresentation}}</td></tr>
+	{% endfor %}
+	{% endfor %}
+</table>
+

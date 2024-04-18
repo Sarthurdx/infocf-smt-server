@@ -1,0 +1,384 @@
+@charset "UTF-8";
+body {
+	background:#444;
+	overflow-y:scroll;
+	
+	
+}
+
+h1 {margin:0;}
+#gui {
+   
+    background: #fefefe;
+    padding:20px;
+    overflow: hidden;
+    box-sizing:border-box;
+    margin:20px;
+}
+
+#gui>div {
+    width: 100%;
+ box-sizing:border-box;
+    
+    
+    float: left;
+}
+
+body {
+    font-family: arial;
+    color:#004c96;
+	font-size:14px;
+}
+
+h2 {
+    
+    font-weight: 700;
+    font-size: 16px;
+	margin-bottom:10px;
+}
+
+textarea {
+    min-height: 250px;
+    width: 95%;
+    font-size:13px;
+}
+
+input[type=button], .btn {
+    background: #004c96;
+    color:white;
+    border: 0;
+    padding: 10px;
+}
+
+input[type=text] {
+    padding: 10px;
+}
+
+input {
+    margin: 2px;
+	font-size:13px;
+}
+#logo {
+	width:200px;
+	margin-left:-20px;
+}
+#head {
+	padding: 0 20px;
+	
+}
+
+#r_func, #query, #knowledgebase_wrapper {
+    border: 0px solid #eee;
+    margin-bottom:10px;
+    overflow: hidden;
+    float: left;
+    width: 100%;
+    box-sizing: border-box;
+    background:#dfefff;
+	
+}
+
+#r_func_conf, #r_func_result, #query_conf, #query_result {
+    border: 0px solid #000;
+    width: 50%;
+    padding: 20px;
+    float: left;
+	box-sizing: border-box;
+}
+
+#query_conf, #query_result {
+	width:100%;
+	
+}
+
+#result {
+	height:100%;
+	height:320px;
+	overflow-y:scroll;
+}
+#result_list {
+	
+	height:300px;
+	
+}
+#query {}
+
+
+#r_func_head, #knowledgebase_head, #query_head {
+	 background: #004c96;
+	 color:white;
+	 overflow: hidden;
+	 padding-left:20px;
+	
+}
+
+#r_func_head h2, #knowledgebase_head h2,#query_head h2 {
+    width:90%;
+    float:left;
+    }
+
+.close {
+    float: right;
+    margin-top:20px;
+    margin-right:10px;
+	font-weight:bold;
+	cursor:pointer;
+}
+
+.quater {
+	width:25%;
+	float:left;
+	
+	
+}
+
+.hg {
+	background:rgba(255,255,255,0.5);
+	overflow:hidden;
+}
+.half {
+	width:50%;
+	float:left;
+	
+}
+.full {
+	width:100%;
+	float:left;
+	
+}
+
+#knowledgebase {
+	padding:10px;
+	margin-bottom:10px;
+}
+
+#result_q, #result_w {
+	overflow-x:scroll;
+	
+}
+#result, #result_q, #result_w {
+    background: white;
+    padding: 10px;
+}
+
+#result table, #result_q table, #result_w table {
+    border: 0;
+    width:100%;
+}
+
+#result table th, #result table td, #result_q table th, #result_q table td, #result_w table th, #result_w table td {
+    padding: 5px 10px;
+    background: #dfefff;
+}
+
+#result table th, #result_q table th , #result_w table th  {
+    background: #004c96;
+    color: white;
+}
+
+#result table tr > td:last-of-type {
+   font-weight:bold;
+}
+
+
+.upload-btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+      margin: 2px;
+}
+
+
+.upload-btn-wrapper input[type=file] {
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+
+#knowledgebase_body {
+	padding:20px;
+	
+}
+
+.modal {
+    display:    none;
+    position:   fixed;
+    z-index:    1000;
+    top:        0;
+    left:       0;
+    height:     100%;
+    width:      100%;
+    background: rgba( 255, 255, 255, .8 ) 
+                url('ajax-loader.gif') 
+                50% 50% 
+                no-repeat;
+}
+
+body.loading .modal {
+    overflow: hidden;   
+}
+
+body.loading .modal {
+    display: block;
+}
+
+#r_func_result > div:nth-of-type(1) {
+    width:30%;
+    float:left;
+    height:340px;
+    overflow:hidden;
+    margin-right:10px;
+    }
+#r_func_result > div:nth-of-type(2) {
+    width:calc(70% - 10px);
+    float:left;
+    height:320px;
+    }
+#result_list {
+    background:white;
+    
+    }
+
+#logowrapper {
+	float:right;
+	margin-bottom:10px;
+	font-size:10px;
+	
+}
+#knowledgebase_wrapper, #r_func {
+    width:50%;
+    box-sizing:border-box;
+    height:540px;
+    }
+    
+#gui>div#r_func {width:69%; margin-left: 1%}
+#gui>div#knowledgebase_wrapper { width:30%}
+#gui>div #r_func_conf {width:30%}
+#gui>div #r_func_result {width:70%; height:80%}
+
+#result_list ul,li {
+    list-style: none;
+    padding: 0;
+}
+
+#result_list li {
+    margin-bottom: 2px;
+    width: 100%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#result_list li:hover span {
+    background: #004c96;
+    color: white;
+}
+
+#result_list {
+    padding: 10px;
+}
+
+#result_list span {
+    display: block;
+    float: left;
+    background: #dfefff;
+    padding: 5px;
+
+}
+
+#result_list span.spanhead {
+    background:white;
+    }
+	
+.threeq {width:75%;
+	float:left;}
+.third {width:33%;
+	float:left;}	
+
+.threeq {
+    background: rgba(255,255,255,0.5);
+    overflow: hidden;
+    display: block;
+    padding:10px;
+    box-sizing:border-box;
+}
+.quater {
+    padding:10px;
+    box-sizing:border-box;
+    }
+	#querysystems {
+    display:inline;
+    margin-left:20px;
+    }
+	
+
+
+#result_list {
+    height: 300px;
+    overflow-y: auto;
+}
+
+#result_list ul {
+overflow-y:auto;
+    
+    }
+
+#result_list li {
+overflow-x:auto;
+
+    }
+button,input[type=button], .btn ,.upload-btn-wrapper input[type=file] {
+        background: #004c96;
+    color: white;
+    border: 0;
+    padding: 10px;
+    cursor:pointer;
+    }
+	
+#result_list span.spanhead {
+    background: white;
+    display: block;
+    float: left;
+    padding: 0;
+	width:20px;
+	line-height: 25px;
+}
+
+#demobtn {
+	vertical-align:text-bottom;
+	
+}
+.upload-btn-wrapper {margin:0}
+
+#partition_list {
+
+height:200px;
+overflow-y: scroll;
+float:left;
+width:100%;
+background:white;
+padding:10px;
+}
+
+
+#partition_list {
+
+height:200px;
+overflow-y: scroll;
+float:left;
+width:100%;
+background:white;
+padding:10px;
+}
+
+#result table th:nth-of-Type(1) {
+width:25px;
+}
+
+#querysystems {font-weight:bold}
+
+#demobtn {margin-left:0 !important}
+.upload-btn-wrapper {
+	display:block
+}
