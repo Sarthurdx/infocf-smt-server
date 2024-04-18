@@ -61,7 +61,7 @@ class dummyCKB: ...
 def inferenceP(ckb, query):
     dummy = dummyCKB()
     dummy.conditionals = {i:c for i,c in ckb.conditionals.items()}
-    query_AnotB = Conditional(z3.Not(query.consequence), query.antecedence, None, None)
+    query_AnotB = Conditional(z3.Not(query.consequence), query.antecedence, "", None)
     dummy.conditionals[0] = query_AnotB
     return 'yes' if (consistency(dummy)[0] == False) else 'no'
 

@@ -97,11 +97,10 @@ def inference(request):
         crep=crep.split(';')
         maximpact = int(request.GET.get("maximalimpact"))
         maximpactnr = int(request.GET.get("maximalimpactnr"))
-        mi = makeMI(maximpact, maximpactnr, len(ckb.conditionals))
         systems = request.GET.get("system").split(';')
-        sysResults = evalSystems(ckb, query, systems)
         query =demo.parseQuery( f'({query1}|{query2})' )[1]
         ckb = demo.parseCKB(knowledgebase)
+        mi = makeMI(maximpact, maximpactnr, len(ckb.conditionals))
         ckb.compile_constraint_test()
         print('compiled')
         base_csp = ckb.translate_experimental()
@@ -112,7 +111,8 @@ def inference(request):
         #crep_all = demo.evaluateQueries(knowledgebase,query)
         result = [makeResult(query1, query2, query, m, kappas, mi) for m in mode]
         print('results made')
-        return render(request, 'name.html', {'results':result, 'systems':sysResults})
+        sysResults = evalSystems(ckb, query, systems)
+        return render(request, 'name.html', {'results':result, 'system':sysResults})
 
 
 def cw(request):

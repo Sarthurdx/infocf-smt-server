@@ -48,7 +48,7 @@
 				<div id="r_func_conf">			
 					<div>
 						<h2>Choose representation to compute</h2>
-						<input name=ModelSetKind onclick="changeRadio()"value="CREP_CW" type=radio />cw-minimal c-representations<br>
+						<input name=ModelSetKind onclick="changeRadio()" checked=checked value="CREP_CW" type=radio />cw-minimal c-representations<br>
 						<input name=ModelSetKind onclick="changeRadio()" value="CREP_SUM" type=radio />sum-minimal c-representations<br>
 						<input name=ModelSetKind onclick="changeRadio()" value="CREP_IND" type=radio />ind-minimal c-representations<br>
 						<input name=ModelSetKind onclick="changeRadio()" value="SYSTEM_Z" type=radio />System Z<br>
