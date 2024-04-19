@@ -58,7 +58,7 @@ class Kappa:
         ranks=[]
         while opt.check() ==z3.sat:
             m =opt.model()
-            ranks.append([v.value() for i,v in obj.items()])
+            ranks.append([v.value().as_long() for i,v in obj.items()])
         return (ranks)
 
     def rank_formula(self, formula):
@@ -68,7 +68,8 @@ class Kappa:
         for etas in self.etas_list:
             temp =[]
             for rank in ranks:
-                temp.append(sum(e*r for e,r in zip(etas, rank)))
+                temp.append(sum([e*r for e,r in zip(etas, rank)]))
+            #print(temp)
             ssums.append(min(temp))
         return ssums
 
@@ -83,7 +84,7 @@ class Kappa:
     def infer(self, conditional, mode):
 
         v,f = self.rank_conditional(conditional)
-        print(v,f)
+        #print(v,f)
         s=z3.Solver()
         if mode == 'SKEPTICAL':
             return all((s.check(i < j) == z3.sat) for i,j in zip(v,f))
@@ -137,4 +138,4 @@ def makeKappa(mode, base_csp, ckb):
     if mode == 'CREP_IND':
         etas = demo.evaluateCSP(ckb, base_csp)
         minima = compute_indmin(ckb, etas)
-        return Kappa(etas, ckb)
+        return Kappa(minima, ckb)
