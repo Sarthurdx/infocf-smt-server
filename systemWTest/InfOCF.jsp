@@ -100,7 +100,7 @@
 					</div>
 					<div class="third border" >
 						<h2>Maximal impact</h2>
-						<input name=MaximalImpactQ checked=checked value="0" type=radio />number of conditionals<br>
+						<input name=MaximalImpactQ checked=checked value="0" type=radio />unbounded<br>
 						<input name=MaximalImpactQ value="1" type=radio />number of conditionals<br>
 						<input name=MaximalImpactQ value="2" type=radio />exponential of conditionals<br>
 						<input name=MaximalImpactQ value="3" type=radio />manual <input type="number" value="0" name="MaximalImpactQNr"  /><br>
