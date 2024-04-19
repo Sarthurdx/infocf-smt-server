@@ -133,7 +133,8 @@ def cw(request):
             minima = min(sum(i) for i in crep_cw)
             crep_cw = [i for i in crep_cw if sum(i) == minima]
         if model == "CREP_IND":
-            crep_cw = compute_indmin(crep_cw)
+            ckb=demo.parseCKB(knowledgebase)
+            crep_cw = compute_indmin(ckb, crep_cw)
         if mi != 'unbounded':
             crep_cw = [i for i in crep_cw if (all((j <= mi) for j in i))]
         result = CW(len(crep_cw), crep_cw)

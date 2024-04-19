@@ -51,14 +51,14 @@
 						<input name=ModelSetKind onclick="changeRadio()" checked=checked value="CREP_CW" type=radio />cw-minimal c-representations<br>
 						<input name=ModelSetKind onclick="changeRadio()" value="CREP_SUM" type=radio />sum-minimal c-representations<br>
 						<input name=ModelSetKind onclick="changeRadio()" value="CREP_IND" type=radio />ind-minimal c-representations<br>
-						<input name=ModelSetKind onclick="changeRadio()" value="SYSTEM_Z" type=radio />System Z partition<br>
+						<input name=ModelSetKind onclick="changeRadio()" value="SYSTEM_Z" type=radio />System Z<br>
 					</div>
 					<div>
 						<h2>Maximal impact (for c-representations)</h2>
-						<input name=MaximalImpactRF checked=checked value="0" type=radio disabled="" />Unbounded<br>
-						<input name=MaximalImpactRF value="1" type=radio disabled="" />Number of conditionals<br>
-						<input name=MaximalImpactRF value="2" type=radio disabled="" />Exponential in number of conditionals<br>
-						<input name=MaximalImpactRF value="3" type=radio disabled="" />Manual <input type="number" value="0" name="MaximalImpactRFNr"  /><br>
+						<input name=MaximalImpactRF checked=checked value="0" type=radio  />Unbounded<br>
+						<input name=MaximalImpactRF value="1" type=radio  />Number of conditionals<br>
+						<input name=MaximalImpactRF value="2" type=radio  />Exponential in number of conditionals<br>
+						<input name=MaximalImpactRF value="3" type=radio  />Manual <input type="number" value="0" name="MaximalImpactRFNr"  /><br>
 						<!--  <input type=button value="Save OCFS"/>-->
 						<br>
 						<input type=button id=btn_calc_rfunc value="Compute"/>
@@ -126,10 +126,6 @@
 					</div>
 				</div>
 				<div id="query_result">
-					<div>
-						<h2>Query results for inference systems</h2>
-						<div id=result_w></div>
-					</div>
 					<div>
 						<h2>Query results for inference based on c-representations</h2>
 						<div id=result_q></div>
