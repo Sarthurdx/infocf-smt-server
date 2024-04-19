@@ -51,7 +51,7 @@
 						<input name=ModelSetKind onclick="changeRadio()" checked=checked value="CREP_CW" type=radio />cw-minimal c-representations<br>
 						<input name=ModelSetKind onclick="changeRadio()" value="CREP_SUM" type=radio />sum-minimal c-representations<br>
 						<input name=ModelSetKind onclick="changeRadio()" value="CREP_IND" type=radio />ind-minimal c-representations<br>
-						<input name=ModelSetKind onclick="changeRadio()" value="SYSTEM_Z" type=radio />System Z<br>
+						<input name=ModelSetKind onclick="changeRadio()" value="SYSTEM_Z" type=radio />System Z partition<br>
 					</div>
 					<div>
 						<h2>Maximal impact (for c-representations)</h2>
@@ -91,10 +91,10 @@
 					<div class=threeq>
 					<h2>Inference with c-representations</h2>
 					<div class=third>
-						
+						<input name=crep value="CREP_ALL" type=checkbox checked=checked />all<br>
 						<input name=crep value="CREP_CW" type=checkbox />cw-minimal<br>
 						<input name=crep value="CREP_SUM" type=checkbox />sum-minimal<br>
-						<input name=crep value="CREP_ALL" type=checkbox checked=checked />all<br>
+						<input name=crep value="CREP_IND" type=checkbox />ind-minimal<br>
 						
 						
 					</div>

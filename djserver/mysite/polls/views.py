@@ -123,9 +123,10 @@ def cw(request):
         model = request.GET.get("modelkind")
         maximalimpact = int(request.GET.get("maximalimpact"))
         maximalimpactnr = int(request.GET.get("maximalimpactnr"))
-        crep_cw = demo.evaluateCKB(knowledgebase)
         if model == "SYSTEM_Z":
-            return partition(request)
+            result = CW(1, [['dummy']])
+            return render(request, 'cw.html', {'cw':result})
+        crep_cw = demo.evaluateCKB(knowledgebase)
         mi = makeMI(maximalimpact, maximalimpactnr, len(crep_cw[0]))
 
         if model == "CREP_SUM":

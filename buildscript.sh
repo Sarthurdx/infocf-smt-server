@@ -3,7 +3,7 @@
 
 cd djserver/mysite;
 docker build -t backend .;
-cd ../../systemWtest;
+cd ../../systemWTest;
 rm systemWTest.war;
 jar -cvf systemWTest.war *;
 docker build -t frontend .;

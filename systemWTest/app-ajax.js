@@ -64,9 +64,9 @@ $(document).ready(function() {
 					}
 				});
 			}
-			else {
-				backend = 'http://wbs2.fernuni-hagen.de:18085/polls/'
-				$.get(backend+'consistency', {
+			else{
+				backend = 'http://wbs2.fernuni-hagen.de:18085/polls/consistency/'
+				$.get(backend, {
 					knowledgebase : knowledgebase,
 					modelkind : modelkind,
 					maximalimpact: maximalimpact,
@@ -74,11 +74,8 @@ $(document).ready(function() {
 				}, function(responseText) {
 						if (responseText.trim() == 'true') {
 							// Call servlet
-							
-							backend = 'http://wbs2.fernuni-hagen.de:18085/polls/'
-							folder = 'cw/'
-
-							$.get(backend+'cw/', {
+							backend = 'http://wbs2.fernuni-hagen.de:18085/polls/cw/'
+							$.get(backend, {
 								knowledgebase : knowledgebase,
 								modelkind : modelkind,
 								maximalimpact: maximalimpact,
@@ -86,9 +83,9 @@ $(document).ready(function() {
 							}, function(responseText) {
 									if (responseText.trim() !== '') {
 										$('#r_func_result').replaceWith(responseText);
-
 										if (modelkind == 'SYSTEM_Z') {
-											$.get(backend+'partition/', {
+											backend = 'http://wbs2.fernuni-hagen.de:18085/polls/partition/'
+											$.get(backend, {
 												knowledgebase : tmpkb
 											}, function(responseText) {
 													console.log(responseText);
@@ -105,7 +102,6 @@ $(document).ready(function() {
 						}
 				});
 			}
-		  
 		}	
 	});
 	
@@ -215,14 +211,13 @@ $(document).ready(function() {
 				if (responseText !== '') {
 			var results = responseText.split('EOD');
 				$('#result_q').html(results[0]);
-				$('#result_w').html(results[1]);
+				//$('#result_w').html(results[1]);
 				if (results[1] !== '')
 				$('#querysystems').replaceWith(results[1]);
+//				
 		}
 				
 		});
-
-
 	});
 	
 	// 
