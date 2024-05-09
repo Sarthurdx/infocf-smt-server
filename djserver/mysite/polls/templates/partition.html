@@ -1,9 +1,22 @@
 
-<table>
-	{% for i in part %}
-	<tr><th>level {{forloop.counter}}</th></tr>
-	{% for c in i %}
-	<tr><td>{{c.textRepresentation}}</td></tr>
-	{% endfor %}
-	{% endfor %}
-</table>
+<div id='r_func_result'>
+	<div>
+		<h2>Solutions (1)</h2>
+		<div id='result_list'>
+			<ul>
+				<table>
+					{% for i in part %}
+					<tr><th>level {{forloop.counter}}</th></tr>
+					{% for c in i %}
+					<tr><td>{{c.textRepresentation}}</td></tr>
+					{% endfor %}
+					{% endfor %}
+				</table>
+			</ul>
+		</div>
+	</div>
+</div>
+
+
+
+

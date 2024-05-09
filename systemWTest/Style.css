@@ -225,7 +225,7 @@ body.loading .modal {
 }
 
 #r_func_result > div:nth-of-type(1) {
-    width:30%;
+    width:100%;
     float:left;
     height:340px;
     overflow:hidden;

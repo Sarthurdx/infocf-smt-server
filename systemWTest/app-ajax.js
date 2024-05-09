@@ -83,7 +83,7 @@ $(document).ready(function() {
 							}, function(responseText) {
 									if (responseText.trim() !== '') {
 										$('#r_func_result').replaceWith(responseText);
-										if (modelkind == 'SYSTEM_Z') {
+										if (modelkind == 'maximal tolerance partition') {
 											backend = 'http://wbs2.fernuni-hagen.de:18085/polls/partition/'
 											$.get(backend, {
 												knowledgebase : tmpkb
@@ -542,7 +542,7 @@ function checkConditionals(input) {
 	// Match conditionals list
 	line = input.replace(/ /g,'');
 console.log("line "+line);
-	var regexString = /\{([a-z!,#; \(\)|]+)\}/gi,
+	var regexString = /\{([a-zA-Z0-9!,#; \(\)|]+)\}/gi,
     matches;
 	matches = regexString.exec(line.trim());
 	
@@ -553,7 +553,7 @@ console.log("line "+line);
 	} else {
 		strConditionals = matches[1].trim();
 	}
-	regexString = /^([a-z0-9_]+)[ ]?\{/gi;
+	regexString = /^([a-zA-Z0-9_]+)[ ]?\{/gi;
 	matches = regexString.exec(line.trim());
 	
 	if (matches === null) {
@@ -675,7 +675,7 @@ function checkConditional(input) {
 	
 	
 	
-	var regexString = /^[a-zTB| (),;!]+$/ig;
+	var regexString = /^[a-zA-Z0-9TB| (),;!]+$/ig;
 	var matches = regexString.exec(input.trim());
 	
 	
@@ -697,7 +697,7 @@ function checkConditional(input) {
 			
 			
 			
-			regexString = /^[!]?[a-zTB|(),;!]+$/ig;
+			regexString = /^[!]?[a-zA-Z0-9TB|(),;!]+$/ig;
 			matches = regexString.exec(list[u].trim());
 			
 			
@@ -725,7 +725,7 @@ function checkConditionalForQuery(input) {
 	
 	
 	
-	var regexString = /^[a-zTB|(),;!]+$/ig;
+	var regexString = /^[a-zA-Z0-9TB|(),;!]+$/ig;
 	var matches = regexString.exec(input.trim());
 	
 	
@@ -747,7 +747,7 @@ function checkConditionalForQuery(input) {
 			
 			
 			
-			regexString = /^[!]?[a-z|TB(),;!]+$/ig;
+			regexString = /^[!]?[a-zA-Z0-9|TB(),;!]+$/ig;
 			matches = regexString.exec(list[u].trim());
 			
 			

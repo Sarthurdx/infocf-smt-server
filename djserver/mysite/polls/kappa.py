@@ -84,6 +84,8 @@ class Kappa:
     def infer(self, conditional, mode):
 
         v,f = self.rank_conditional(conditional)
+        print(v,f)
+        #raise ValueError(v,f)
         #print(v,f)
         s=z3.Solver()
         if mode == 'SKEPTICAL':
@@ -107,20 +109,21 @@ class KappaAll:
 
     def infer(self, conditional, mode):
         s = z3.Solver()
+        s.add(self.base_csp)
 
         if mode == 'SKEPTICAL':
             query = self.ckb.compile_and_encode_query(conditional)
-            return s.check(self.base_csp + query) == z3.unsat
+            return s.check(query) == z3.unsat
 
         if mode == 'CREDULOUS':
             query = self.ckb.compile_and_encode_query_credulous(conditional)
-            return s.check(self.base_csp + query) == z3.sat
+            return s.check(query) == z3.sat
 
         if mode == 'WEAKLY_SKEPTICAL':
             query = self.ckb.compile_and_encode_query_credulous(conditional)
-            if s.check(self.base_csp + query) == z3.sat:
+            if s.check(query) == z3.sat:
                 query = self.ckb.compile_translate_query_finegrained(conditional.antecedence, conditional.consequence)
-                return s.check(self.base_csp + query) == z3.unsat
+                return s.check(query) == z3.unsat
             return False
 
 

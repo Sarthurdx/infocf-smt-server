@@ -9,7 +9,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-		<title>InfOCF+W - Lehrgebiet Wissensbasierte Systeme</title>
+		<title>InfOCF - Lehrgebiet Wissensbasierte Systeme</title>
 		<link href="Style.css" rel="stylesheet">
 		<link rel='icon' href='favicon.ico' type='image/x-icon'/ >
 		<script src="jQuery.min.js" type="text/javascript"></script>
@@ -23,7 +23,7 @@
 				<div id=logowrapper><img id=logo src="logo.png" /><br>
 				<a target="_blank" href="https://fernuni-hagen.de/wbs/">Knowledge Based Systems</a><br>
 				Prof. Dr. Christoph Beierle</div>
-				<h1>InfOCF+W</h1>
+				<h1>InfOCF</h1>
 				<b>A tool for reasoning with conditional knowledge bases</b><br>
 			</div>
 			<div id="knowledgebase_wrapper">
@@ -51,7 +51,7 @@
 						<input name=ModelSetKind onclick="changeRadio()" checked=checked value="CREP_CW" type=radio />cw-minimal c-representations<br>
 						<input name=ModelSetKind onclick="changeRadio()" value="CREP_SUM" type=radio />sum-minimal c-representations<br>
 						<input name=ModelSetKind onclick="changeRadio()" value="CREP_IND" type=radio />ind-minimal c-representations<br>
-						<input name=ModelSetKind onclick="changeRadio()" value="SYSTEM_Z" type=radio />System Z<br>
+						<input name=ModelSetKind onclick="changeRadio()" value="" type=radio />maximal tolerance partition<br>
 					</div>
 					<div>
 						<h2>Maximal impact (for c-representations)</h2>
@@ -70,9 +70,9 @@
 						<h2>Solutions</h2>
 						<div id=result_list></div>
 					</div>
-					<div>
-						<div id=result></div>
-					</div>
+					<!-- <div> -->
+					<!--	<div id=result></div> -->
+					<!-- </div> -->
 				</div>
 				
 			</div>
