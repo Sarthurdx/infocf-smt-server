@@ -169,8 +169,9 @@ def inferZ(ckb, query):
     partition, _ = consistency(ckb)
     opt,obj = zIndicatorOptimizer(partition)
     AB = query.make_A_then_B()
-    AnB = query.make_A_then_B()
+    AnB = query.make_A_then_not_B()
     opt.check(AB)
+
     ab = obj.value().as_long()
     opt.check(AnB)
     aNb = obj.value().as_long()

@@ -53,7 +53,7 @@ class Kappa:
     def prepare_rank_formula(self, formula):
         opt = z3.Optimize()
         opt.set(priority='pareto')
-        obj = {i:opt.add_soft(c.make_A_then_not_B(), id=i) for i,c in self.conditionals.items()}
+        obj = {i:opt.add_soft(c.make_A_then_not_B()==False, id=i) for i,c in self.conditionals.items()}
         opt.add(formula)
         ranks=[]
         while opt.check() ==z3.sat:
