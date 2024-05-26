@@ -53,8 +53,8 @@ class myVisitor(CKBVisitor):
     def visitConditionals(self, ctx:CKBParser.ConditionalsContext):
         name = ctx.name.text
         conditionals = [self.visit(i) for i in ctx.conditional()]
-        if len(conditionals) < 3:
-            raise ValueError("Only CKB's with at least 3 conditionals are supported")
+        #if len(conditionals) < 3:
+        #    raise ValueError("Only CKB's with at least 3 conditionals are supported")
         return  name, conditionals
 
 
